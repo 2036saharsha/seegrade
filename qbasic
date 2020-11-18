@@ -1,0 +1,515 @@
+eng=0
+nep=0
+sci=0
+soc=0
+math=0
+opt=0
+comp=0
+hpe=0
+
+
+INPUT "ENTER FULL NAME: "; N$
+INITIAL$ = LEFT$(N$, 1)
+FOR I = 1 TO LEN(N$)
+  B$ = MID$(N$,I,1)
+  IF B$ = " " THEN
+    INITIAL$ = INITIAL$ + MID$(N$,I+1,1)
+  END IF
+NEXT I
+
+INPUT "ENTER ENGLISH MARKS: "; eng
+INPUT "ENTER NEPALI MARKS: "; nep
+INPUT "ENTER SCIENCE MARKS: "; sci
+INPUT "ENTER SOCIAL MARKS: "; soc
+INPUT "ENTER MATH MARKS: "; math
+INPUT "ENTER OPT MATH MARKS: "; opt
+INPUT "ENTER COMPUTER MARKS: "; comp
+INPUT "ENTER HPE MARKS: "; hpe
+ce=0
+
+IF eng >= 90 AND eng <= 100 THEN 
+  eng$="A+"
+  grade=4.0
+END IF
+IF eng >= 80 AND eng < 90 THEN 
+  eng$="A"
+  grade=3.6
+END IF
+IF eng >= 70  AND eng < 80 THEN 
+  eng$="B+"
+  grade=3.2
+END IF
+IF eng < 70 AND eng >= 60 THEN 
+  eng$="B"
+  grade=2.8
+END IF
+IF eng < 60 AND eng >= 50 THEN eng$="C+"
+  eng$="C+"
+  grade=2.6
+IF eng < 50 AND eng >= 40 THEN 
+  eng$="C"
+  grade=2
+END IF
+  
+IF eng < 40 AND eng >= 30 THEN 
+  eng$="D+"
+  grade=1.6
+END IF
+
+IF eng < 30 AND eng >= 20 THEN 
+  eng$="D"
+  grade=1.2
+END IF
+
+IF eng < 20 AND eng >= 0 THEN 
+  eng$="E"
+  grade=0.8
+  IF eng < 10 AND eng >= 0 THEN
+    grade=0
+  END IF
+END IF
+  
+
+PRINT eng$
+
+
+IF nep >= 90 AND nep <= 100 THEN 
+  nep$="A+"
+  graden=4.0
+END IF
+IF nep >= 80 AND nep < 90 THEN 
+  nep$="A"
+  graden=3.6
+END IF
+IF nep >= 70  AND nep < 80 THEN 
+  nep$="B+"
+  graden=3.2
+END IF
+IF nep < 70 AND nep >= 60 THEN 
+  nep$="B"
+  graden=2.8
+END IF
+IF nep < 60 AND nep >= 50 THEN nep$="C+"
+  nep$="C+"
+  graden=2.6
+IF nep < 50 AND nep >= 40 THEN 
+  nep$="C"
+  graden=2
+END IF
+  
+IF nep < 40 AND nep >= 30 THEN 
+  nep$="D+"
+  graden=1.6
+END IF
+
+IF nep < 30 AND nep >= 20 THEN 
+  nep$="D"
+  graden=1.2
+END IF
+
+IF nep < 20 AND nep >= 0 THEN 
+  nep$="E"
+  graden=0.8
+  IF nep < 10 AND nep >= 0 THEN
+    graden=0
+  END IF
+END IF
+PRINT nep$
+
+IF soc >= 90 AND soc <= 100 THEN 
+  soc$="A+"
+  grades=4.0
+END IF
+IF soc >= 80 AND soc < 90 THEN 
+  soc$="A"
+  grades=3.6
+END IF
+IF soc >= 70  AND soc < 80 THEN 
+  soc$="B+"
+  grades=3.2
+END IF
+IF soc < 70 AND soc >= 60 THEN 
+  soc$="B"
+  grades=2.8
+END IF
+IF soc < 60 AND soc >= 50 THEN
+  soc$="C+"
+  grades=2.6
+END IF
+IF soc < 50 AND soc >= 40 THEN 
+  soc$="C"
+  grades=2
+END IF
+  
+IF soc < 40 AND soc >= 30 THEN 
+  soc$="D+"
+  grades=1.6
+END IF
+
+IF soc < 30 AND soc >= 20 THEN 
+  soc$="D"
+  grades=1.2
+END IF
+
+IF soc < 20 AND soc >= 0 THEN 
+  soc$="E"
+  grades=0.8
+  IF soc < 10 AND soc >= 0 THEN
+    grades=0
+  END IF
+END IF
+PRINT soc$
+
+IF sci >= 90 AND sci <= 100 THEN 
+  sci$="A+"
+  gradesc=4.0
+END IF
+IF sci >= 80 AND sci < 90 THEN 
+  sci$="A"
+  gradesc=3.6
+END IF
+IF sci >= 70  AND sci < 80 THEN 
+  sci$="B+"
+  gradesc=3.2
+END IF
+IF sci < 70 AND sci >= 60 THEN 
+  sci$="B"
+  gradesc=2.8
+END IF
+IF sci < 60 AND sci >= 50 THEN
+  sci$="C+"
+  gradesc=2.6
+END IF
+IF sci < 50 AND sci >= 40 THEN 
+  sci$="C"
+  gradesc=2
+END IF
+  
+IF sci < 40 AND sci >= 30 THEN 
+  sci$="D+"
+  gradesc=1.6
+END IF
+
+IF sci < 30 AND sci >= 20 THEN 
+  sci$="D"
+  gradesc=1.2
+END IF
+
+IF sci < 20 AND sci >= 0 THEN 
+  sci$="E"
+  gradesc=0.8
+  IF sci < 10 AND sci >= 0 THEN
+    gradesc=0
+  END IF
+END IF
+PRINT sci$
+
+IF comp >= 90 AND comp <= 100 THEN 
+  comp$="A+"
+  gradec=4.0
+END IF
+IF comp >= 80 AND comp < 90 THEN 
+  comp$="A"
+  gradec=3.6
+END IF
+IF comp >= 70  AND comp < 80 THEN 
+  comp$="B+"
+  gradec=3.2
+END IF
+IF comp < 70 AND comp >= 60 THEN 
+  comp$="B"
+  gradec=2.8
+END IF
+IF comp < 60 AND comp >= 50 THEN
+  comp$="C+"
+  gradec=2.6
+END IF
+IF comp < 50 AND comp >= 40 THEN 
+  comp$="C"
+  gradec=2
+END IF
+  
+IF comp < 40 AND comp >= 30 THEN 
+  comp$="D+"
+  gradec=1.6
+END IF
+
+IF comp < 30 AND comp >= 20 THEN 
+  comp$="D"
+  gradec=1.2
+END IF
+
+IF comp < 20 AND comp >= 0 THEN 
+  comp$="E"
+  gradec=0.8
+  IF comp < 10 AND comp >= 0 THEN
+    gradec=0
+  END IF
+END IF
+PRINT comp$
+
+IF math >= 90 AND math <= 100 THEN 
+  math$="A+"
+  gradem=4.0
+END IF
+IF math >= 80 AND math < 90 THEN 
+  math$="A"
+  gradem=3.6
+END IF
+IF math >= 70  AND math < 80 THEN 
+  math$="B+"
+  gradem=3.2
+END IF
+IF math < 70 AND math >= 60 THEN 
+  math$="B"
+  gradem=2.8
+END IF
+IF math < 60 AND math >= 50 THEN
+  math$="C+"
+  gradem=2.6
+END IF
+IF math < 50 AND math >= 40 THEN 
+  math$="C"
+  gradem=2
+END IF
+  
+IF math < 40 AND math >= 30 THEN 
+  math$="D+"
+  gradem=1.6
+END IF
+
+IF math < 30 AND math >= 20 THEN 
+  math$="D"
+  gradem=1.2
+END IF
+
+IF math < 20 AND math >= 0 THEN 
+  math$="E"
+  gradem=0.8
+  IF math < 10 AND math >= 0 THEN
+    gradem=0
+  END IF
+END IF
+PRINT math$
+
+IF opt >= 90 AND opt <= 100 THEN 
+  opt$="A+"
+  gradeo=4.0
+END IF
+IF opt >= 80 AND opt < 90 THEN 
+  opt$="A"
+  gradeo=3.6
+END IF
+IF opt >= 70  AND opt < 80 THEN 
+  opt$="B+"
+  gradeo=3.2
+END IF
+IF opt < 70 AND opt >= 60 THEN 
+  opt$="B"
+  gradeo=2.8
+END IF
+IF opt < 60 AND opt >= 50 THEN opt$="C+"
+  opt$="C+"
+  gradeo=2.6
+IF opt < 50 AND opt >= 40 THEN 
+  opt$="C"
+  gradeo=2
+END IF
+  
+IF opt < 40 AND opt >= 30 THEN 
+  opt$="D+"
+  gradeo=1.6
+END IF
+
+IF opt < 30 AND opt >= 20 THEN 
+  opt$="D"
+  gradeo=1.2
+END IF
+
+IF opt < 20 AND opt >= 0 THEN 
+  opt$="E"
+  gradeo=0.8
+  IF opt < 10 AND opt >= 0 THEN
+    gradeo=0
+  END IF
+END IF
+PRINT opt$
+
+IF hpe >= 90 AND hpe <= 100 THEN 
+  hpe$="A+"
+  gradeh=4.0
+END IF
+IF hpe >= 80 AND hpe < 90 THEN 
+  hpe$="A"
+  gradeh=3.6
+END IF
+IF hpe >= 70  AND hpe < 80 THEN 
+  hpe$="B+"
+  gradeh=3.2
+END IF
+IF hpe < 70 AND hpe >= 60 THEN 
+  hpe$="B"
+  gradeh=2.8
+END IF
+IF hpe < 60 AND hpe >= 50 THEN hpe$="C+"
+  hpe$="C+"
+  gradeh=2.6
+IF hpe < 50 AND hpe >= 40 THEN 
+  hpe$="C"
+  gradeh=2
+END IF
+  
+IF hpe < 40 AND hpe >= 30 THEN 
+  hpe$="D+"
+  gradeh=1.6
+END IF
+
+IF hpe < 30 AND hpe >= 20 THEN 
+  hpe$="D"
+  gradeh=1.2
+END IF
+
+IF hpe < 20 AND hpe >= 0 THEN 
+  hpe$="E"
+  gradeh=0.8
+  IF hpe < 10 AND hpe >= 0 THEN
+    gradeh=0
+  END IF
+END IF
+PRINT hpe$
+
+total =(grade+gradec+gradeh+gradem+graden+gradeo+grades+gradesc)/8
+
+
+
+PRINT "-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-WELCOME-x-x-x-x-x-x-x-x-x-x-x-x--x-x-x-x-x-x-x-x-x-x-x-"
+PRINT " "
+PRINT "CONGRATULATIONS FOR COMPLETING SEE EXAMINATION!!"
+PRINT " "
+PRINT "Dear, ";INITIAL$
+PRINT " "
+
+PRINT "S/N";
+PRINT "      ";
+PRINT "SUBJECT";
+PRINT "      ";
+PRINT "MARKS";
+PRINT "      ";
+PRINT "GRADE";
+PRINT "      ";
+PRINT "GPA"
+PRINT " "
+
+PRINT "1";
+PRINT "         ";
+PRINT "ENGLISH";
+PRINT "        ";
+PRINT eng;
+PRINT "       ";
+PRINT eng$;
+PRINT "        ";
+PRINT grade
+
+PRINT "2";
+PRINT "         ";
+PRINT "NEPALI";
+PRINT "         ";
+PRINT nep;
+PRINT "       ";
+PRINT nep$;
+PRINT "        ";
+PRINT graden
+
+PRINT "3";
+PRINT "         ";
+PRINT "SCIENCE";
+PRINT "        ";
+PRINT sci;
+PRINT "       ";
+PRINT sci$;
+PRINT "         ";
+PRINT gradesc
+
+PRINT "4";
+PRINT "         ";
+PRINT "SOCIAL";
+PRINT "         ";
+PRINT soc;
+PRINT "       ";
+PRINT soc$;
+PRINT "        ";
+PRINT gradesc
+
+
+PRINT "5";
+PRINT "         ";
+PRINT "MATHS";
+PRINT "          ";
+PRINT math;
+PRINT "       ";
+PRINT math$;
+PRINT "         ";
+PRINT gradem
+
+PRINT "5";
+PRINT "         ";
+PRINT "COMPUTER";
+PRINT "       ";
+PRINT comp;
+PRINT "       ";
+PRINT comp$;
+PRINT "        ";
+PRINT gradec
+
+
+PRINT "7";
+PRINT "         ";
+PRINT "OPTIONAL MATHS";
+PRINT " ";
+PRINT opt;
+PRINT "       ";
+PRINT opt$;
+PRINT "        ";
+PRINT gradeo
+
+PRINT "8";
+PRINT "         ";
+PRINT "HPE";
+PRINT "            ";
+PRINT hpe;
+PRINT "       ";
+PRINT hpe$;
+PRINT "         ";
+PRINT gradeh
+
+
+PRINT "-+-+-+-+-+-+-+-+";
+PRINT "TOTAL GPA";
+PRINT "-+-+-+-+-+-+-+-+";
+PRINT "   ";
+Total$=STR$(total)
+g$=MID$(Total$,1,1)
+h$=MID$(Total$,3,1)
+PRINT g$;
+PRINT ".";
+PRINT h$
+
+PRINT " "
+PRINT " "
+
+PRINT "-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-THANK YOU-x-x-x-x-x-x-x-x-x-x-x-x--x-x-x-x-x-x-x-x-x-x-"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
